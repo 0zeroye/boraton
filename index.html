@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-CN"> <!-- 页面语言设置 -->
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博朗通 BORATON - 智能家居设计典范</title> <!-- 更新标题，更具概括性 -->
-    <meta name="description" content="探索搏朗通BORATON的智能升降家具，融合创新设计、精湛工艺与抗菌岩板技术，为您的现代家居空间带来前所未有的多功能与奢华体验。"> <!-- 增加 meta description -->
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <link rel="icon" href="博朗通-黑白.jpg" type="image/png"> <!-- Favicon -->
+    <title>博朗通 BORATON - 智能家居设计典范</title>
+    <meta name="description" content="探索博朗通BORATON的智能升降家具，融合创新设计、精湛工艺与抗菌岩板技术，为您的现代家居空间带来前所未有的多功能与奢华体验。">
+    <script src="https://boraton.com/tw.html"></script>
+    <link rel="icon" href="博朗通-黑白.jpg" type="image/png">
     <style>
-        /* --- CSS 变量定义 (主题化) --- */
         :root {
-            /* -- 深色主题 (默认) -- */
-            --bg-primary: #0d0d0d; --bg-secondary: #1a1a1a; --bg-card: #1f1f1f; --bg-banner: #1f1f1f; --bg-navbar: rgba(18, 18, 18, 0.8); --bg-navbar-hover: rgba(18, 18, 18, 0.95); --bg-dropdown: #1f1f1f; --bg-dropdown-hover: rgba(255, 255, 255, 0.1); --bg-button-blue: #2563eb; --bg-button-blue-hover: #1d4ed8; --bg-button-blue-hover-gradient: linear-gradient(to right, #1d4ed8, #2563eb); --bg-button-secondary: rgba(255, 255, 255, 0.1); --bg-button-secondary-hover: rgba(255, 255, 255, 0.2); --bg-carousel-button: rgba(0, 0, 0, 0.5); --bg-carousel-button-hover: rgba(0, 0, 0, 0.8); --bg-preloader: #0d0d0d; --bg-section-highlight: #121212; /* 用于设计哲学等特殊区块背景 */
+            --bg-primary: #0d0d0d; --bg-secondary: #1a1a1a; --bg-card: #1f1f1f; --bg-banner: #1f1f1f; --bg-navbar: rgba(18, 18, 18, 0.8); --bg-navbar-hover: rgba(18, 18, 18, 0.95); --bg-dropdown: #1f1f1f; --bg-dropdown-hover: rgba(255, 255, 255, 0.1); --bg-button-blue: #2563eb; --bg-button-blue-hover: #1d4ed8; --bg-button-blue-hover-gradient: linear-gradient(to right, #1d4ed8, #2563eb); --bg-button-secondary: rgba(255, 255, 255, 0.1); --bg-button-secondary-hover: rgba(255, 255, 255, 0.2); --bg-carousel-button: rgba(0, 0, 0, 0.5); --bg-carousel-button-hover: rgba(0, 0, 0, 0.8); --bg-preloader: #0d0d0d; 
+            --bg-section-highlight: #121212;
+            --design-philosophy-overlay: rgba(13, 13, 13, 0.65);
+
 
             --text-primary: #e2e2e2; --text-secondary: #a0a0a0; --text-heading: #ffffff; --text-link: #58a6ff; --text-link-hover: #80bfff; --text-button-blue: #ffffff; --text-button-secondary: #e2e2e2; --text-button-secondary-hover: #ffffff; --text-footer: #a0a0a0; --text-footer-heading: #e2e2e2; --text-footer-link-hover: #ffffff; --text-placeholder: #e2e2e2; --text-icon: #58a6ff;
 
@@ -20,16 +21,16 @@
             --shadow-card: rgba(0, 0, 0, 0.2); --shadow-card-hover: rgba(0, 0, 0, 0.35); --shadow-banner: rgba(0, 0, 0, 0.15); --shadow-banner-hover: rgba(0, 0, 0, 0.3); --shadow-navbar: rgba(0, 0, 0, 0.1); --shadow-dropdown: rgba(0, 0, 0, 0.3); --shadow-button: rgba(0,0,0,0.2); --shadow-button-hover: rgba(0,0,0,0.35); --shadow-image: rgba(0, 0, 0, 0.5); --glow-card-hover: 0 0 15px rgba(88, 166, 255, 0.3); --shadow-feature-icon: rgba(88, 166, 255, 0.2);
 
             --transition-duration: 0.3s; --transition-timing: ease-in-out; --transition-timing-elastic: cubic-bezier(0.23, 1, 0.32, 1);
-            --section-spacing-top: 6rem; /* 增加 section 间距 */ --section-padding-internal: 6rem; /* 增加 section 内部 padding */
+            --section-spacing-top: 6rem; --section-padding-internal: 6rem; 
 
-            /* Hero Section Overlay Variable (Dark Theme) */
-            --hero-overlay-bg: rgba(13, 13, 13, 0.55); /* Dark overlay for dark theme */
-            --hero-carousel-overlay: rgba(0,0,0,0.25); /* Overlay for hero carousel slides for text contrast */
+            --hero-overlay-bg: rgba(13, 13, 13, 0.55); 
+            --hero-carousel-overlay: rgba(0,0,0,0.25); 
         }
 
-        /* --- 淺色主題 --- */
         body.light-theme {
-            --bg-primary: #f8f9fa; --bg-secondary: #ffffff; --bg-card: #ffffff; --bg-banner: #ffffff; --bg-navbar: rgba(255, 255, 255, 0.8); --bg-navbar-hover: rgba(255, 255, 255, 0.95); --bg-dropdown: #ffffff; --bg-dropdown-hover: rgba(0, 0, 0, 0.05); --bg-button-blue: #007bff; --bg-button-blue-hover: #0056b3; --bg-button-blue-hover-gradient: linear-gradient(to right, #0056b3, #007bff); --bg-button-secondary: rgba(0, 0, 0, 0.05); --bg-button-secondary-hover: rgba(0, 0, 0, 0.1); --bg-carousel-button: rgba(255, 255, 255, 0.6); --bg-carousel-button-hover: rgba(255, 255, 255, 0.9); --bg-preloader: #f8f9fa; --bg-section-highlight: #f1f3f5; /* 用于设计哲学等特殊区块背景 */
+            --bg-primary: #f8f9fa; --bg-secondary: #ffffff; --bg-card: #ffffff; --bg-banner: #ffffff; --bg-navbar: rgba(255, 255, 255, 0.8); --bg-navbar-hover: rgba(255, 255, 255, 0.95); --bg-dropdown: #ffffff; --bg-dropdown-hover: rgba(0, 0, 0, 0.05); --bg-button-blue: #007bff; --bg-button-blue-hover: #0056b3; --bg-button-blue-hover-gradient: linear-gradient(to right, #0056b3, #007bff); --bg-button-secondary: rgba(0, 0, 0, 0.05); --bg-button-secondary-hover: rgba(0, 0, 0, 0.1); --bg-carousel-button: rgba(255, 255, 255, 0.6); --bg-carousel-button-hover: rgba(255, 255, 255, 0.9); --bg-preloader: #f8f9fa; 
+            --design-philosophy-overlay: rgba(248, 249, 250, 0.7);
+
 
             --text-primary: #212529; --text-secondary: #6c757d; --text-heading: #1a1a1a; --text-link: #0056b3; --text-link-hover: #003875; --text-button-blue: #ffffff; --text-button-secondary: #343a40; --text-button-secondary-hover: #1a1a1a; --text-footer: #6c757d; --text-footer-heading: #343a40; --text-footer-link-hover: #0056b3; --text-placeholder: #6c757d; --text-icon: #007bff;
 
@@ -37,12 +38,10 @@
 
             --shadow-card: rgba(0, 0, 0, 0.08); --shadow-card-hover: rgba(0, 0, 0, 0.18); --shadow-banner: rgba(0, 0, 0, 0.06); --shadow-banner-hover: rgba(0, 0, 0, 0.15); --shadow-navbar: rgba(0, 0, 0, 0.05); --shadow-dropdown: rgba(0, 0, 0, 0.1); --shadow-button: rgba(0, 0, 0, 0.1); --shadow-button-hover: rgba(0, 0, 0, 0.18); --shadow-image: rgba(0, 0, 0, 0.15); --glow-card-hover: 0 0 15px rgba(0, 86, 179, 0.2); --shadow-feature-icon: rgba(0, 86, 179, 0.1);
             
-            /* Hero Section Overlay Variable (Light Theme) */
-            --hero-overlay-bg: rgba(248, 249, 250, 0.65); /* Light overlay for light theme */
-            --hero-carousel-overlay: rgba(255,255,255,0.15); /* Overlay for hero carousel slides for text contrast */
+            --hero-overlay-bg: rgba(248, 249, 250, 0.65); 
+            --hero-carousel-overlay: rgba(255,255,255,0.15); 
         }
 
-        /* --- 基礎樣式 --- */
         body {
             background-color: var(--bg-primary);
             background-image: linear-gradient(to bottom, var(--bg-primary), color-mix(in srgb, var(--bg-primary) 95%, var(--text-primary) 5%));
@@ -57,18 +56,33 @@
             -moz-osx-font-smoothing: grayscale;
         }
         body.loaded { opacity: 1; }
+        body.no-scroll-during-drag { overflow-y: hidden; }
+        body.desktop-menu-open { overflow: hidden; } /* Prevent scrolling when full-screen menu is open */
+        body.desktop-menu-open main {
+            filter: blur(8px); /* Apply blur effect */
+            transition: filter 0.4s ease-out;
+            pointer-events: none; /* Disable interaction with blurred content */
+        }
+        body:not(.desktop-menu-open) main {
+            filter: none;
+            transition: filter 0.4s ease-out;
+        }
+
         button span, a span, .icon-placeholder { vertical-align: middle; } 
 
-        /* --- 導航欄 --- */
         .navbar-blur { background-color: var(--bg-navbar); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); border-bottom: 1px solid var(--border-color); transition: background-color var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing); box-shadow: 0 2px 4px var(--shadow-navbar); }
         .navbar-blur:hover { background-color: var(--bg-navbar-hover); }
-        .navbar-blur a:not(.brand-logo) { position: relative; color: var(--text-primary); text-decoration: none; padding-bottom: 4px; transition: color var(--transition-duration) var(--transition-timing), transform 0.2s ease; }
-        .navbar-blur a:not(.brand-logo)::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 0; height: 1.5px; background-color: var(--text-link); transition: width var(--transition-duration) ease-out, left var(--transition-duration) ease-out; }
-        .navbar-blur a:not(.brand-logo):hover { color: var(--text-heading); transform: scale(1.05); }
-        .navbar-blur a:not(.brand-logo):hover::after { width: 100%; left: 0; }
+        .navbar-blur a:not(.brand-logo):not(.desktop-product-menu-toggle) { position: relative; color: var(--text-primary); text-decoration: none; padding-bottom: 4px; transition: color var(--transition-duration) var(--transition-timing), transform 0.2s ease; }
+        .navbar-blur a:not(.brand-logo):not(.desktop-product-menu-toggle)::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 0; height: 1.5px; background-color: var(--text-link); transition: width var(--transition-duration) ease-out, left var(--transition-duration) ease-out; }
+        .navbar-blur a:not(.brand-logo):not(.desktop-product-menu-toggle):hover { color: var(--text-heading); transform: scale(1.05); }
+        .navbar-blur a:not(.brand-logo):not(.desktop-product-menu-toggle):hover::after { width: 100%; left: 0; }
         .navbar-blur button { color: var(--text-primary); transition: color var(--transition-duration) var(--transition-timing), transform 0.2s ease; background: none; border: none; padding: 0; cursor: pointer; } 
         .navbar-blur button:hover { color: var(--text-heading); transform: scale(1.05); }
         #theme-toggle:hover { transform: scale(1.1) rotate(15deg); }
+        #theme-toggle:focus {
+            outline: none;
+            box-shadow: none;
+        }
         .brand-logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.02em; color: var(--text-heading); display: flex; align-items: center; transition: transform 0.2s ease; padding-bottom: 0; }
         .brand-logo::after { display: none; }
         .brand-logo img { max-height: 24px; margin-right: 8px; transition: transform 0.3s ease, filter var(--transition-duration) var(--transition-timing); }
@@ -77,10 +91,9 @@
         .brand-logo:hover { transform: scale(1.03); }
 
 
-        /* 下拉菜單 */
         .dropdown { position: relative; }
         .dropdown-menu { 
-            position: absolute; top: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); min-width: 180px; background-color: var(--bg-dropdown); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 8px 16px var(--shadow-dropdown); z-index: 60; opacity: 0; visibility: hidden;
+            position: absolute; top: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); min-width: 180px; background-color: var(--bg-dropdown); border: 1px solid var(--border-color); border-radius: 16px; /* Increased from 8px */ box-shadow: 0 8px 16px var(--shadow-dropdown); z-index: 60; opacity: 0; visibility: hidden;
             transition: opacity var(--transition-duration) var(--transition-timing), visibility var(--transition-duration) var(--transition-timing), transform var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing);
             transform-origin: top center; transform: translateX(-50%) translateY(-10px);
             padding-top: 0.5rem; padding-bottom: 0.5rem; 
@@ -118,26 +131,23 @@
         .dropdown-toggle .chevron-icon { display: inline-block; transition: transform var(--transition-duration) var(--transition-timing); font-size: 0.75rem; line-height: 1; margin-left: 0.25rem; }
         .dropdown-toggle[aria-expanded="true"] .chevron-icon { transform: rotate(180deg); } 
 
-        /* --- 文本鏈接和按鈕 --- */
         .cta-link { color: var(--text-link); text-decoration: none; font-size: 1.1rem; margin: 0 0.5rem; position: relative; padding-bottom: 2px; transition: color var(--transition-duration) var(--transition-timing), transform 0.2s ease; }
         .cta-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: var(--text-link-hover); transform: scaleX(0); transform-origin: bottom right; transition: transform var(--transition-duration) var(--transition-timing-elastic); }
         .cta-link:hover { color: var(--text-link-hover); transform: scale(1.05); }
         .cta-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        .button-blue { display: inline-block; background-color: var(--bg-button-blue); color: var(--text-button-blue); padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; font-weight: 600; border: none; transition: background-color var(--transition-duration) var(--transition-timing), transform 0.2s ease, box-shadow var(--transition-duration) var(--transition-timing), background-image var(--transition-duration) var(--transition-timing); box-shadow: 0 2px 4px var(--shadow-button); }
+        .button-blue { display: inline-block; background-color: var(--bg-button-blue); color: var(--text-button-blue); padding: 0.8rem 1.8rem; border-radius: 16px; /* Increased from 8px */ text-decoration: none; font-size: 0.95rem; font-weight: 600; border: none; transition: background-color var(--transition-duration) var(--transition-timing), transform 0.2s ease, box-shadow var(--transition-duration) var(--transition-timing), background-image var(--transition-duration) var(--transition-timing); box-shadow: 0 2px 4px var(--shadow-button); }
         .button-blue:hover { background-image: var(--bg-button-blue-hover-gradient); background-color: var(--bg-button-blue-hover); transform: scale(1.03) translateY(-2px); box-shadow: 0 6px 12px var(--shadow-button-hover); }
         .button-blue:active { transform: scale(0.98) translateY(0px); box-shadow: 0 2px 4px var(--shadow-button); }
-        .button-secondary { display: inline-block; background-color: var(--bg-button-secondary); color: var(--text-button-secondary); box-shadow: none; border: 1px solid var(--border-button-secondary); padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 500; border-radius: 8px; text-decoration: none; transition: background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing), transform 0.2s ease, border-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing); }
+        .button-secondary { display: inline-block; background-color: var(--bg-button-secondary); color: var(--text-button-secondary); box-shadow: none; border: 1px solid var(--border-button-secondary); padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 500; border-radius: 16px; /* Increased from 8px */ text-decoration: none; transition: background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing), transform 0.2s ease, border-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing); }
         .button-secondary:hover { background-color: var(--bg-button-secondary-hover); color: var(--text-button-secondary-hover); transform: scale(1.03) translateY(-1px); border-color: var(--border-button-secondary-hover); box-shadow: 0 3px 6px rgba(0,0,0,0.05); }
         .button-secondary:active { transform: scale(0.99) translateY(0px); box-shadow: none; }
 
-        /* --- 區塊標題 --- */
         .section-title { color: var(--text-heading); transition: color var(--transition-duration) var(--transition-timing), text-shadow 0.4s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
         .section-subtitle { color: var(--text-secondary); transition: color var(--transition-duration) var(--transition-timing); }
         .section-paragraph { color: var(--text-primary); line-height: 1.7; opacity: 0.9; }
 
-        /* --- "搏朗通的卓越之处" 新特色展示卡片 (Features Showcase) --- */
         .feature-showcase-card {
-            width: 280px; height: 380px; flex-shrink: 0; position: relative; border-radius: 12px; overflow: hidden;
+            width: 280px; height: 380px; flex-shrink: 0; position: relative; border-radius: 24px; /* Increased from 12px */ overflow: hidden;
             background-size: cover; background-position: center; color: white; text-decoration: none;
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; box-shadow: 0 6px 12px var(--shadow-card);
             margin-right: 1.5rem; 
@@ -145,41 +155,35 @@
         .feature-showcase-card:last-child { margin-right: 0; }
         .feature-showcase-card:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 10px 20px var(--shadow-card-hover); }
         .feature-showcase-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%); transition: background-color 0.3s ease; z-index: 1; }
+        .feature-showcase-card:hover .feature-showcase-card-overlay { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%); }
         .feature-showcase-card-content { position: relative; z-index: 2; display: flex; flex-direction: column; height: 100%; justify-content: flex-end; padding: 1.5rem; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
         .feature-showcase-card-content h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: white; }
         .feature-showcase-card-content p { font-size: 0.9rem; font-weight: 400; opacity: 0.9; color: white; line-height: 1.5; }
 
 
-        /* --- 明星產品橫幅 --- */
-        .star-product-banner { background-color: var(--bg-banner); border: 1px solid var(--border-banner); border-radius: 12px; box-shadow: 0 6px 16px var(--shadow-banner); transition: transform var(--transition-duration) var(--transition-timing-elastic), box-shadow var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing); overflow: hidden; }
+        .star-product-banner { background-color: var(--bg-banner); border: 1px solid var(--border-banner); border-radius: 24px; /* Increased from 12px */ box-shadow: 0 6px 16px var(--shadow-banner); transition: transform var(--transition-duration) var(--transition-timing-elastic), box-shadow var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing); overflow: hidden; }
         .star-product-banner:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 10px 25px var(--shadow-banner-hover); border-color: var(--border-card-hover); }
         .star-product-banner .banner-image { overflow: hidden; border-radius: inherit; }
         .star-product-banner .banner-image img { display: block; transition: transform 0.4s ease; width: 100%; height: 100%; object-fit: cover; }
         .star-product-banner:hover .banner-image img { transform: scale(1.05); }
 
-        /* --- Grid 卡片動畫 --- */
         .fade-in-section.visible .animated-card { animation-delay: var(--animation-delay); animation-fill-mode: both; animation-name: zoomInCustom; animation-duration: 0.6s; }
         @keyframes zoomInCustom { from { transform: scale(0.95) translateY(10px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
 
-        /* --- 預加載器 --- */
         #preloader { position: fixed; left: 0; top: 0; z-index: 9999; width: 100%; height: 100%; overflow: visible; background: var(--bg-preloader); display: flex; justify-content: center; align-items: center; transition: opacity 0.5s ease-out; }
         .spinner { border: 4px solid var(--border-preloader); border-left-color: var(--border-preloader-active); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* --- 區塊淡入 --- */
         .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; } 
         .fade-in-section.visible { opacity: 1; transform: translateY(0); }
 
-        /* --- Hero Section Background Image --- */
-        .hero-background-section { background-image: url('pictures/首页背景.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; }
+        .hero-background-section { background-image: url('images/index_hero_main_background.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; }
         .hero-background-section::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--hero-overlay-bg); z-index: 1; transition: background-color var(--transition-duration) var(--transition-timing); }
         .hero-background-section > .container-xl > .max-w-4xl, .hero-background-section > .container-xl > .hero-carousel-wrapper { position: relative; z-index: 2; }
 
-        /* --- Hero Carousel Styles --- */
         .hero-carousel { width: 100%; height: 100%; position: relative; }
         .hero-carousel-track { display: flex; height: 100%; transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1); }
         .hero-carousel-slide { width: 100%; height: 100%; flex-shrink: 0; position: relative; }
-        .hero-carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
         .hero-carousel-slide::after { content: ''; position: absolute; inset: 0; background-color: var(--hero-carousel-overlay); pointer-events: none; }
         .hero-carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); color: white; border: none; padding: 0.75rem; border-radius: 9999px; cursor: pointer; z-index: 10; transition: background-color 0.2s ease; font-size: 1.25rem; line-height: 1; }
         .hero-carousel-nav:hover { background-color: rgba(0,0,0,0.5); }
@@ -190,13 +194,20 @@
         .hero-carousel-dot:hover { background-color: rgba(255,255,255,0.7); transform: scale(1.1); }
         .hero-carousel-dot.active { background-color: white; transform: scale(1.1); }
 
-        /* --- Apple-style Product Showcase Cards (用於"探索全系列智能家居"的滾動卡片) --- */
         .product-showcase-card {
-            display: block; position: relative; overflow: hidden; border-radius: 12px; 
+            display: block; position: relative; overflow: hidden; border-radius: 24px; /* Increased from 12px */ 
             background-size: cover; background-position: center; color: white; text-decoration: none;
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
             box-shadow: 0 8px 16px var(--shadow-card); 
             flex-shrink: 0; width: 320px; margin-right: 1.5rem; 
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        .product-showcase-card img {
+            pointer-events: none;
+            width: 100%; /* Ensure image takes full width of its container */
+            height: 100%; /* Ensure image takes full height of its container */
+            object-fit: cover; /* Crop image to cover the area while maintaining aspect ratio */
         }
         .product-showcase-card:last-child { margin-right: 0; }
         .product-showcase-card:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 12px 28px var(--shadow-card-hover); }
@@ -211,107 +222,115 @@
         .cta-link-on-image:hover .arrow-on-image { transform: translateX(2px); }
         .animated-card.product-showcase-card { animation-delay: var(--animation-delay); }
 
-        /* --- 水平滾動容器和軌道 --- */
         .horizontal-scroll-wrapper {
-            width: 100%; overflow-x: auto; padding-bottom: 1rem; 
-            -ms-overflow-style: none; scrollbar-width: none; 
-            cursor: grab; /* 初始鼠標樣式為抓手 */
+            width: 100%; 
+            overflow-x: auto; /* Ensure horizontal scrolling is enabled */
+            padding-bottom: 1rem; 
+            -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+            scrollbar-width: none; /* For Firefox */
+            cursor: grab; 
         }
-        .horizontal-scroll-wrapper::-webkit-scrollbar { display: none; }
+        .horizontal-scroll-wrapper::-webkit-scrollbar { 
+            display: none; /* For Chrome, Safari, and Opera */
+        }
         .horizontal-scroll-wrapper.grabbing {
-            cursor: grabbing; /* 拖動時鼠標樣式 */
+            cursor: grabbing; 
         }
         .horizontal-scroll-track {
             display: flex; width: max-content; padding-left: 0; 
         }
 
-        /* --- 設計哲學區塊 (Apple Style) --- */
         #design-philosophy-section {
-            background-color: var(--bg-section-highlight); /* 特殊背景色 */
-            overflow: hidden; /* 防止內部元素溢出影響佈局 */
+            position: relative;
+            background-image: url('images/index_design_philosophy_main.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: var(--text-heading);
+            padding-top: var(--section-padding-internal);
+            padding-bottom: var(--section-padding-internal);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .design-philosophy-content-wrapper {
-            display: flex; /* 使用 Flexbox 佈局 */
-            align-items: center; /* 垂直居中對齊 */
-            gap: 3rem; /* 圖片和文字之間的間距 */
-            flex-direction: column; /* 移動端默認垂直排列 */
+        #design-philosophy-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--design-philosophy-overlay);
+            z-index: 1;
+            transition: background-color var(--transition-duration) var(--transition-timing);
         }
-        .design-philosophy-image-container {
-            flex: 1 1 auto; /* Flexbox 伸展和收縮 */
-            width: 100%; /* 移動端佔滿寬度 */
-            max-width: 550px; /* 圖片最大寬度 */
-            border-radius: 12px; /* 圓角 */
-            overflow: hidden; /* 裁剪圖片超出部分 */
-            box-shadow: 0 10px 25px var(--shadow-image); /* 圖片陰影 */
+        .design-philosophy-text-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            text-align: center;
+            padding: 2rem;
         }
-        .design-philosophy-image-container img {
-            display: block;
-            width: 100%;
-            height: auto; /* 高度自適應 */
-            object-fit: cover; /* 圖片覆蓋容器 */
+        #design-philosophy-section h2.section-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-heading);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
-        .design-philosophy-text-container {
-            flex: 1 1 auto; /* Flexbox 伸展和收縮 */
-            width: 100%; /* 移動端佔滿寬度 */
-            max-width: 600px; /* 文字區塊最大寬度 */
-            text-align: center; /* 移動端文字居中 */
+        #design-philosophy-section h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-link);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
-        .design-philosophy-text-container h2.section-title { /* 主標題 */
-             font-size: 3rem; /* 稍大字體 */
-             margin-bottom: 0.75rem;
-        }
-        .design-philosophy-text-container h3 { /* 副標題 */
-            font-size: 1.5rem; /* text-2xl */
-            font-weight: 500; /* font-medium */
-            color: var(--text-link); /* 使用鏈接顏色強調 */
-            margin-bottom: 1.5rem;
-        }
-        .design-philosophy-text-container p.section-paragraph { /* 段落文字 */
-            font-size: 1.05rem; /* 稍大一點的段落文字 */
+        #design-philosophy-section p.section-paragraph {
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--text-secondary); /* 使用次要文字顏色 */
-            max-width: 520px; /* 段落最大寬度，使其更易讀 */
-            margin-left: auto; /* 居中對齊 */
-            margin-right: auto; /* 居中對齊 */
+            color: var(--text-primary);
+            opacity: 0.9;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
-        @media (min-width: 992px) { /* 較大屏幕 (lg) */
-            .design-philosophy-content-wrapper {
-                flex-direction: row; /* 水平排列 */
-                gap: 4rem; /* 增加間距 */
-            }
-            .design-philosophy-image-container {
-                flex-basis: 45%; /* 圖片佔據 45% */
-                max-width: none; /* 取消最大寬度限制 */
-            }
-            .design-philosophy-text-container {
-                flex-basis: 55%; /* 文字佔據 55% */
-                text-align: left; /* 文字左對齊 */
-                max-width: none;
-            }
-             .design-philosophy-text-container p.section-paragraph {
-                margin-left: 0; /* 左對齊 */
-                margin-right: 0; /* 左對齊 */
-             }
+        #design-philosophy-section p.section-paragraph:last-child {
+            margin-bottom: 0;
+        }
+        body.light-theme #design-philosophy-section h2.section-title,
+        body.light-theme #design-philosophy-section p.section-paragraph {
+             color: var(--text-heading);
+        }
+        body.light-theme #design-philosophy-section h3 {
+            color: var(--text-link);
         }
 
-
-         /* --- 客户评价区块 --- */
-         .testimonial-card { background-color: var(--bg-card); border: 1px solid var(--border-testimonial); border-left: 4px solid var(--text-link); border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px var(--shadow-card); transition: background-color var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing); }
+        .testimonial-card { background-color: var(--bg-card); border: 1px solid var(--border-testimonial); border-left: 4px solid var(--text-link); border-radius: 16px; /* Increased from 8px */ padding: 1.5rem; box-shadow: 0 2px 8px var(--shadow-card); transition: background-color var(--transition-duration) var(--transition-timing), border-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing); }
         .testimonial-card blockquote { font-size: 1rem; font-style: italic; color: var(--text-primary); margin-bottom: 1rem; position: relative; line-height: 1.7; } 
          .testimonial-card blockquote::before { content: '“'; position: absolute; top: 0; left: -1rem; font-size: 3rem; color: var(--text-secondary); line-height: 1; opacity: 0.2; }
          .testimonial-card p { font-size: 0.9rem; font-weight: 600; color: var(--text-heading); text-align: right; }
          .testimonial-card p span { font-weight: normal; color: var(--text-secondary); }
 
-        /* --- Call to Action (CTA) 区块 --- */
-        .cta-section { background: linear-gradient(135deg, var(--bg-button-blue-hover), var(--bg-button-blue)); color: var(--text-button-blue); padding: 4rem 2rem; text-align: center; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+        .cta-section { background: linear-gradient(135deg, var(--bg-button-blue-hover), var(--bg-button-blue)); color: var(--text-button-blue); padding: 4rem 2rem; text-align: center; border-radius: 24px; /* Increased from 12px */ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
         .cta-section h2 { color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin-bottom: 1rem; }
         .cta-section p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
-         .cta-section .button-white { background-color: #ffffff; color: var(--bg-button-blue); padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color var(--transition-duration) var(--transition-timing), transform 0.2s ease, box-shadow var(--transition-duration) var(--transition-timing); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+         .cta-section .button-white { 
+            background-color: #ffffff; 
+            color: var(--bg-button-blue); 
+            padding: 0.8rem 2rem; 
+            border-radius: 16px; /* Increased from 8px */ 
+            text-decoration: none; 
+            font-weight: 600; 
+            border: none;
+            transition: background-color var(--transition-duration) var(--transition-timing), transform 0.2s ease, box-shadow var(--transition-duration) var(--transition-timing); 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            position: relative; /* For QR code positioning */
+            display: inline-flex; /* To center content and allow QR code positioning */
+            align-items: center;
+            justify-content: center;
+            overflow: visible; /* Allow QR code to overflow */
+        }
          .cta-section .button-white:hover { background-color: #e9ecef; transform: scale(1.05) translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
          .cta-section .button-white:active { transform: scale(0.98) translateY(0); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 
 
-        /* --- 頁腳 --- */
         footer { background-color: var(--bg-card); color: var(--text-footer); transition: background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing); border-top: 1px solid var(--border-color); }
         footer .border-b, footer .border-t { border-color: var(--border-footer); }
         footer h4, footer h5 { color: var(--text-footer-heading); }
@@ -321,20 +340,22 @@
         footer a:hover { color: var(--text-footer-link-hover); } 
         footer .text-gray-500 { color: var(--text-secondary); opacity: 0.8;} 
 
-        /* --- 區塊間距 --- */
         main > section { padding-left: 0; padding-right: 0; padding-bottom: var(--section-padding-internal); padding-top: 0; width: 100%; }
         main > section + section { margin-top: var(--section-spacing-top); border-top: 1px solid var(--border-section-divider); padding-top: var(--section-padding-internal); transition: border-color var(--transition-duration) var(--transition-timing); }
+        #design-philosophy-section {
+            padding-top: var(--section-padding-internal);
+        }
+
+
         footer { margin-top: var(--section-spacing-top); padding: 0; transition: background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing); border-top: 1px solid var(--border-color); }
          footer .container-xl { padding-top: calc(var(--section-padding-internal) * 0.6); padding-bottom: calc(var(--section-padding-internal) * 0.6); }
 
-        /* 通用容器 */
         .container-xl { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
         @media (min-width: 640px) { .container-xl { padding-left: 1.5rem; padding-right: 1.5rem; } #mobile-menu, .dropdown-menu { padding-left: 1rem; padding-right: 1rem; } }
         @media (min-width: 1024px) { .container-xl { padding-left: 2.5rem; padding-right: 2.5rem; } }
         .navbar-blur > .max-w-screen-xl { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
         @media (min-width: 1024px) { .navbar-blur > .max-w-screen-xl { padding-left: 2.5rem; padding-right: 2.5rem; } }
 
-        /* --- 其他工具類 (保持簡潔，只列出關鍵或修改的) --- */
          .max-w-4xl { max-width: 960px; } .max-w-2xl { max-width: 720px; } .max-w-screen-lg { max-width: 1024px; }
          .text-center { text-align: center; } .text-left { text-align: left; }
          .text-5xl { font-size: 3.5rem; line-height: 1.1; letter-spacing: -0.05em; text-shadow: 1px 1px 3px var(--shadow-card); } 
@@ -344,7 +365,7 @@
          .text-xl { font-size: 1.3rem; line-height: 1.5; }
          .text-lg { font-size: 1.15rem; line-height: 1.7; color: var(--text-primary); opacity: 0.9;}
          .font-semibold { font-weight: 600; } .font-bold { font-weight: 700; }
-         .flex { display: flex; } .flex-col { flex-direction: column; } .items-center { align-items: center; } .justify-between { justify-content: space-between; }
+         .flex { display: flex; } .flex-col { flex-direction: column; } .items-center { align-items: center; } .justify-between { justify-content: space-between; } .justify-center { justify-content: center;}
          .grid { display: grid; } .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
          .gap-8 { gap: 2rem; }
          .mb-4 { margin-bottom: 1rem; } .mb-6 { margin-bottom: 1.5rem; } .mb-10 { margin-bottom: 2.5rem; } .mb-12 { margin-bottom: 3rem; }
@@ -354,16 +375,165 @@
          .hidden { display: none; } 
          @media (min-width: 768px) { .md\:flex { display: flex; } .md\:flex-row { flex-direction: row; } .md\:w-1\/2 { width: 50%; } .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
          .sticky { position: sticky; } .absolute { position: absolute; } .relative { position: relative; } .top-0 { top: 0; } .top-14 { top: 3.5rem; } .z-50 { z-index: 50; } 
-         .rounded-lg { border-radius: 0.5rem; } .rounded-md { border-radius: 0.375rem; } 
-         .focus\:outline-none { outline: 2px solid transparent; outline-offset: 2px; } .focus\:ring-2 { --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color); box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); } .focus\:ring-inset { --tw-ring-inset: inset; } .focus\:ring-\[var\(--text-link\)\] { --tw-ring-color: var(--text-link); } .focus\:ring-offset-2 { --tw-ring-offset-width: 2px; } .focus\:ring-offset-\[var\(--bg-navbar\)\] { --tw-ring-offset-color: var(--bg-navbar); }
+         .rounded-lg { border-radius: 1rem; /* Increased from 0.5rem */ } .rounded-md { border-radius: 0.75rem; /* Increased from 0.375rem */ } 
+         #mobile-menu-button:focus {
+             outline: none;
+             box-shadow: none;
+         }
 
-        /* --- 動畫定義 --- */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } .fade-in { animation: fadeIn 1s ease-out; }
         @keyframes slideInLeft { from { transform: translateX(-30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } } .slide-in-left { animation: slideInLeft 0.8s ease-out; }
         @keyframes slideInRight { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } } .slide-in-right { animation: slideInRight 0.8s ease-out; }
         .zoom-in { animation: zoomIn 0.8s ease-out; } @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } } 
 
         .hidden-icon { display: none; }
+
+        #mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease-out;
+        }
+
+        #mobile-menu.mobile-menu-open {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* Desktop Full Screen Product Menu Styles */
+        #desktop-full-screen-product-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 90; /* Higher than navbar */
+            background-color: var(--bg-navbar); /* Use navbar background for consistency */
+            backdrop-filter: saturate(180%) blur(15px);
+            -webkit-backdrop-filter: saturate(180%) blur(15px);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-100%); /* Start off-screen */
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0.4s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            /* Hide on mobile */
+            display: none; 
+        }
+
+        @media (min-width: 768px) {
+            #desktop-full-screen-product-menu {
+                display: flex; /* Show on desktop */
+            }
+            #desktop-full-screen-product-menu.hidden {
+                display: none; /* Control visibility with JS */
+            }
+        }
+
+
+        #desktop-full-screen-product-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #desktop-full-screen-product-menu .close-button {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+            z-index: 91;
+        }
+
+        #desktop-full-screen-product-menu .close-button:hover {
+            color: var(--text-link);
+            transform: rotate(90deg);
+        }
+
+        #desktop-full-screen-product-menu .menu-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem; /* Spacing between links */
+        }
+
+        #desktop-full-screen-product-menu .menu-content a {
+            font-size: 2.2rem; /* Larger for full screen */
+            font-weight: 600;
+            color: var(--text-heading);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: color 0.2s ease, transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        #desktop-full-screen-product-menu.open .menu-content a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation for links */
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(1) { transition-delay: 0.1s; }
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(2) { transition-delay: 0.15s; }
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(3) { transition-delay: 0.2s; }
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(4) { transition-delay: 0.25s; }
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(5) { transition-delay: 0.3s; }
+        #desktop-full-screen-product-menu.open .menu-content a:nth-child(6) { transition-delay: 0.35s; }
+
+        #desktop-full-screen-product-menu .menu-content a:hover {
+            color: var(--text-link);
+            transform: scale(1.05);
+        }
+
+        /* 微信二维码悬浮样式 */
+        .cta-section .button-white .wechat-qr-code {
+            position: absolute;
+            bottom: calc(100% + 10px); /* Adjust distance from button */
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 150px; /* QR code image width */
+            height: 150px; /* QR code image height */
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 16px; /* Increased from 8px */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            pointer-events: none; /* Allow clicks to pass through when hidden */
+            padding: 8px; /* Padding around QR code */
+        }
+
+        .cta-section .button-white:hover .wechat-qr-code {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto; /* Enable clicks on QR code when visible */
+        }
+
+        .cta-section .button-white .wechat-qr-code img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .cta-section .button-white .wechat-qr-code {
+                width: 120px;
+                height: 120px;
+                bottom: calc(100% + 8px);
+            }
+        }
+
     </style>
 </head>
 <body class="bg-[#0d0d0d]">
@@ -373,28 +543,18 @@
     <nav class="navbar-blur sticky top-0 z-50 w-full h-14">
         <div class="max-w-screen-xl mx-auto px-6 lg:px-10 h-full">
             <div class="flex justify-between items-center h-full">
-                <a href="index.html" class="brand-logo flex items-center"> <img src="博朗通-白字.png" alt="搏朗通 Logo"> </a>
+                <a href="index.html" class="brand-logo flex items-center"> <img src="博朗通-白字.png" alt="博朗通 Logo"> </a>
                  <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <div class="dropdown">
-                        <button id="product-category-toggle" type="button" class="flex items-center dropdown-toggle" aria-expanded="false" aria-haspopup="true"> 产品系列 <span class="chevron-icon">▼</span> </button>
-                        <div id="product-category-menu" class="dropdown-menu hidden">
-                            <a href="majiang.html">智能升降多功能桌</a> 
-                            <a href="https://www.boraton.com/category/island">多功能智慧岛台</a> 
-                            <a href="https://www.boraton.com/category/living">客厅智慧方案</a> 
-                            <a href="https://www.boraton.com/category/dining">餐厅智慧方案</a> 
-                            <a href="https://www.boraton.com/category/bedroom">卧室智慧方案</a> 
-                             <a href="https://www.boraton.com/category/office">办公智慧方案</a> 
-                        </div>
-                    </div>
+                    <button id="desktop-product-menu-toggle" type="button" class="flex items-center"> 产品系列 <span class="chevron-icon">▼</span> </button>
                     <a href="about.html">关于我们</a> 
                     <a href="#features-showcase-section">核心特色</a> 
                     <a href="contact.html">联系我们</a>
-                    <button id="theme-toggle" type="button" title="切换主题" class="ml-4 p-1.5 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--bg-navbar)] focus:ring-[var(--text-link)]"> <span class="sun-icon">☀️</span> <span class="moon-icon hidden-icon">🌙</span> </button>
+                    <button id="theme-toggle" type="button" title="切换主题" class="ml-4 p-1.5 rounded-full text-lg"> <span class="sun-icon">☀️</span> <span class="moon-icon hidden-icon">🌙</span> </button>
                  </div>
-                 <button id="mobile-menu-button" aria-label="打开菜单" class="md:hidden p-2 rounded-md text-xl hover:bg-[var(--bg-button-secondary-hover)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--text-link)]"> <span>☰</span> </button>
+                 <button id="mobile-menu-button" aria-label="打开菜单" class="md:hidden p-2 rounded-md text-xl hover:bg-[var(--bg-button-secondary-hover)]"> <span>☰</span> </button>
             </div>
         </div>
-        <div id="mobile-menu" class="md:hidden absolute top-14 left-0 w-full bg-[var(--bg-card)] shadow-lg p-4 border-t border-[var(--border-color)] hidden">
+        <div id="mobile-menu" class="md:hidden absolute top-14 left-0 w-full bg-[var(--bg-card)] shadow-lg p-4 border-t border-[var(--border-color)]">
             <a href="about.html" class="block py-2 px-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">关于博朗通</a>
             <h4 class="text-[var(--text-secondary)] text-xs uppercase mt-3 mb-1 px-3 font-semibold">产品系列</h4>
             <a href="majiang.html" class="block py-2 pl-6 pr-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">智能升降多功能桌</a>
@@ -405,7 +565,7 @@
             <a href="https://www.boraton.com/category/office" class="block py-2 pl-6 pr-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">办公智慧方案</a>
             <div class="border-t border-[var(--border-footer)] my-2"></div>
             <a href="#features-showcase-section" class="block py-2 px-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">核心特色</a>
-            <a href="#support" class="block py-2 px-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">支援服务</a>
+            <a href="#support" class="block py-2 px-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">支持服务</a>
             <div class="border-t border-[var(--border-footer)] my-2"></div>
             <button id="mobile-theme-toggle" type="button" title="切换主题" class="w-full flex items-center justify-between py-2 px-3 rounded hover:bg-[var(--bg-dropdown-hover)] text-[var(--text-primary)] transition-colors duration-200">
                 <span>切换主题</span>
@@ -414,32 +574,44 @@
         </div>
     </nav>
 
+    <div id="desktop-full-screen-product-menu" class="hidden">
+        <button id="desktop-menu-close-button" class="close-button" aria-label="关闭菜单">✕</button>
+        <div class="menu-content">
+            <a href="majiang.html">智能升降多功能桌</a> 
+            <a href="https://www.boraton.com/category/island">多功能智慧岛台</a> 
+            <a href="https://www.boraton.com/category/living">客厅智慧方案</a> 
+            <a href="https://www.boraton.com/category/dining">餐厅智慧方案</a> 
+            <a href="https://www.boraton.com/category/bedroom">卧室智慧方案</a> 
+            <a href="https://www.boraton.com/category/office">办公智慧方案</a> 
+        </div>
+    </div>
+
     <main>
         <section class="bg-[var(--bg-secondary)] fade-in-section hero-background-section">
             <div class="container-xl">
                 <div class="max-w-4xl mx-auto text-center pt-[var(--section-padding-internal)] pb-[calc(var(--section-padding-internal)/3)] relative z-2">
-                    <h1 class="text-5xl font-bold mb-4 section-title slide-in-left">搏朗通：智造理想</h1>
+                    <h1 class="text-5xl font-bold mb-4 section-title slide-in-left">博朗通：智造理想</h1>
                     <h2 class="text-2xl font-normal mb-6 section-subtitle slide-in-right">融汇创新科技与艺术设计，定义未来家居生活方式</h2>
-                    <p class="text-lg section-paragraph mb-8 max-w-2xl mx-auto fade-in">搏朗通 BORATON，秉持对卓越品质的追求，专注于研发前瞻性的多功能智能家具。我们巧妙平衡现代美学与尖端技术，为您呈现兼具优雅格调与实用智慧的生活空间。</p>
+                    <p class="text-lg section-paragraph mb-8 max-w-2xl mx-auto fade-in">博朗通 BORATON，秉持对卓越品质的追求，专注于研发前瞻性的多功能智能家具。我们巧妙平衡现代美学与尖端技术，为您呈现兼具优雅格调与实用智慧的生活空间。</p>
                 </div>
                 <div class="hero-carousel-wrapper relative mx-auto w-full max-w-screen-lg lg:max-w-screen-xl rounded-lg shadow-xl overflow-hidden mb-[calc(var(--section-padding-internal)/2)] z-2" style="min-height: 350px; max-height: 550px; aspect-ratio: 16/8;">
                     <div class="hero-carousel">
                         <div class="hero-carousel-track">
                             <div class="hero-carousel-slide">
-                                <img src="pictures/首页hero.png" alt="搏朗通智能家居主图 1 - 兼具美学与功能"
-                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图1加载失败]'; this.alt='搏朗通智能家居主图1加载失败'"/>
+                                <img src="images/index_hero_carousel_slide_01.jpg" alt="博朗通智能家居主图 1 - 兼具美学与功能"
+                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图1加载失败]'; this.alt='博朗通智能家居主图1加载失败'"/>
                             </div>
                             <div class="hero-carousel-slide">
-                                <img src="https://placehold.co/1200x600/4B5563/E5E7EB?text=博朗通智能生活系列" alt="搏朗通智能家居主图 2"
-                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图2加载失败]'; this.alt='搏朗通智能家居主图2加载失败'"/>
+                                <img src="images/index_hero_carousel_slide_02.jpg" alt="博朗通智能家居主图 2"
+                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图2加载失败]'; this.alt='博朗通智能家居主图2加载失败'"/>
                             </div>
                             <div class="hero-carousel-slide">
-                                <img src="https://placehold.co/1200x600/1F2937/9CA3AF?text=探索未来家居美学" alt="搏朗通智能家居主图 3"
-                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图3加载失败]'; this.alt='搏朗通智能家居主图3加载失败'"/>
+                                <img src="images/index_hero_carousel_slide_03.jpg" alt="博朗通智能家居主图 3"
+                                     onerror="this.src='https://placehold.co/1200x600/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[主图3加载失败]'; this.alt='博朗通智能家居主图3加载失败'"/>
                             </div>
                         </div>
-                        <button class="hero-carousel-prev hero-carousel-nav" aria-label="Previous slide">❮</button>
-                        <button class="hero-carousel-next hero-carousel-nav" aria-label="Next slide">❯</button>
+                        <button class="hero-carousel-prev hero-carousel-nav" aria-label="上一张">❮</button>
+                        <button class="hero-carousel-next hero-carousel-nav" aria-label="下一张">❯</button>
                         <div class="hero-carousel-dots"></div>
                     </div>
                 </div>
@@ -449,83 +621,74 @@
         <section id="features-showcase-section" class="bg-[var(--bg-primary)] fade-in-section">
             <div class="container-xl">
                 <div class="max-w-screen-lg mx-auto text-center">
-                    <h2 class="text-4xl font-semibold mb-12 section-title slide-in-left">搏朗通的卓越之处</h2>
+                    <h2 class="text-4xl font-semibold mb-12 section-title slide-in-left">博朗通的卓越之处</h2>
                     <p class="text-xl font-normal mb-10 section-subtitle slide-in-right max-w-2xl mx-auto">我们凭借对细节的极致追求和对用户体验的深刻洞察，为您打造无与伦比的家居产品。</p>
                 </div>
                 <div class="horizontal-scroll-wrapper">
                     <div class="horizontal-scroll-track" id="features-scroll-track">
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/4A5568/E2E8F0?text=多场景融合'); --animation-delay: 0.1s;">
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_multifunctional.jpg'); --animation-delay: 0.1s;">
                             <div class="feature-showcase-card-overlay"></div>
                             <div class="feature-showcase-card-content">
                                 <h3>多场景功能融合</h3>
                                 <p>告别空间束缚，一张桌子轻松切换用餐、办公、娱乐模式。</p>
                             </div>
                         </div>
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/5A67D8/E0E7FF?text=智能操控'); --animation-delay: 0.2s;">
-                            <div class="feature-showcase-card-overlay"></div>
-                            <div class="feature-showcase-card-content">
-                                <h3>直观智能操控</h3>
-                                <p>一键智能升降，便捷的高度记忆功能，每一次操作都流畅自如。</p>
-                            </div>
-                        </div>
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/38A169/D1FAE5?text=抗菌岩板'); --animation-delay: 0.3s;">
-                            <div class="feature-showcase-card-overlay"></div>
-                            <div class="feature-showcase-card-content">
-                                <h3>食品级抗菌岩板</h3>
-                                <p>有效抑制细菌滋生，耐刮耐污易清洁，为居家环境筑起健康防线。</p>
-                            </div>
-                        </div>
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/DD6B20/FEEBC8?text=设计美学'); --animation-delay: 0.15s;">
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_minimalist_design.jpg'); --animation-delay: 0.15s;">
                              <div class="feature-showcase-card-overlay"></div>
                             <div class="feature-showcase-card-content">
                                 <h3>现代极简设计</h3>
                                 <p>由国际设计团队倾力打造，融入现代家居美学，提升您的空间品味。</p>
                             </div>
                         </div>
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/718096/EBF8FF?text=超静音'); --animation-delay: 0.25s;">
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_silent_lift.jpg'); --animation-delay: 0.25s;">
                             <div class="feature-showcase-card-overlay"></div>
                             <div class="feature-showcase-card-content">
                                 <h3>超静音平稳升降</h3>
                                 <p>采用高品质静音电机，升降过程平稳顺畅，不打扰您与家人的宁静时光。</p>
                             </div>
                         </div>
-                        <div class="feature-showcase-card animated-card" style="background-image: url('https://placehold.co/280x380/9F7AEA/F3F4F6?text=匠心工艺'); --animation-delay: 0.35s;">
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_craftsmanship.jpg'); --animation-delay: 0.35s;">
                             <div class="feature-showcase-card-overlay"></div>
                             <div class="feature-showcase-card-content">
                                 <h3>匠心工艺，经久耐用</h3>
                                 <p>从选材到制造追求卓越，确保产品结构稳固、细节精致，持久陪伴。</p>
                             </div>
                         </div>
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_smart_control.jpg'); --animation-delay: 0.2s;">
+                            <div class="feature-showcase-card-overlay"></div>
+                            <div class="feature-showcase-card-content">
+                                <h3>直观智能操控</h3>
+                                <p>一键智能升降，便捷的高度记忆功能，每一次操作都流畅自如。</p>
+                            </div>
+                        </div>
+                        <div class="feature-showcase-card animated-card" style="background-image: url('images/index_feature_antibacterial_sintered_stone.jpg'); --animation-delay: 0.3s;">
+                            <div class="feature-showcase-card-overlay"></div>
+                            <div class="feature-showcase-card-content">
+                                <h3>食品级抗菌岩板</h3>
+                                <p>有效抑制细菌滋生，耐刮耐污易清洁，为居家环境筑起健康防线。</p>
+                            </p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 设计理念区块 (Apple Style Remake) -->
-        <section id="design-philosophy-section" class="fade-in-section"> <!-- 背景已在 CSS 中通过 var(--bg-section-highlight) 设置 -->
+        <section id="design-philosophy-section" class="fade-in-section">
             <div class="container-xl">
-                <div class="design-philosophy-content-wrapper">
-                    <!-- 左侧图片 -->
-                    <div class="design-philosophy-image-container animated-card" style="--animation-delay: 0.1s;">
-                        <!-- 您需要替换为高质量的搏朗通设计相关图片 -->
-                        <img src="https://placehold.co/800x650/6B7280/FFFFFF?text=BORATON+设计愿景" 
-                             alt="搏朗通设计哲学与艺术融合"
-                             onerror="this.src='https://placehold.co/800x650/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-secondary').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=[设计理念图加载失败]'; this.alt='设计理念图片加载失败'">
-                    </div>
-                    <!-- 右侧文字 -->
-                    <div class="design-philosophy-text-container animated-card" style="--animation-delay: 0.25s;">
-                        <h2 class="section-title">艺境与功能的和谐共生</h2>
-                        <h3 class="mb-6">不止于家具，更是您生活方式的升华</h3>
-                        <p class="section-paragraph mb-4">
-                            我们坚信，伟大的设计源于对生活的深刻洞察和无限热爱。搏朗通的设计团队，汇聚全球创意智慧，以前瞻性视野审视现代人居需求。
-                        </p>
-                        <p class="section-paragraph">
-                            我们将每一件产品视为融入空间的艺术品，不仅追求视觉上的愉悦，更注重触感、互动和情感联结。通过精妙的结构、严选的材质和人性化的功能，我们力求打造出能与您共同呼吸、成长的智慧家居，让您的生活空间焕发新的活力。
-                        </p>
-                    </div>
+                <div class="design-philosophy-text-wrapper animated-card" style="--animation-delay: 0.15s;">
+                    <h2 class="section-title slide-in-left">艺境与功能的和谐共生</h2>
+                    <h3 class="slide-in-right">不止于家具，更是您生活方式的升华</h3>
+                    <p class="section-paragraph mb-4 fade-in" style="animation-delay: 0.3s;">
+                        我们坚信，伟大的设计源于对生活的深刻洞察和无限热爱。博朗通的设计团队，汇聚全球创意智慧，以前瞻性视野审视现代人居需求。
+                    </p>
+                    <p class="section-paragraph fade-in" style="animation-delay: 0.45s;">
+                        我们将每一件产品视为融入空间的艺术品，不仅追求视觉上的愉悦，更注重触感、互动和情感联结。通过精妙的结构、严选的材质和人性化的功能，我们力求打造出能与您共同呼吸、成长的智慧家居，让您的生活空间焕发新的活力。
+                    </p>
                 </div>
             </div>
         </section>
+
 
         <section class="bg-[var(--bg-primary)] fade-in-section">
             <div class="container-xl">
@@ -533,13 +696,13 @@
                 <div class="space-y-12 md:space-y-16">
                     <div class="star-product-banner flex flex-col md:flex-row items-center animated-card" style="--animation-delay: 0.1s;">
                         <div class="w-full md:w-1/2 flex-shrink-0 banner-image">
-                            <img src="pictures/X6-1.jpg" alt="搏朗通旗舰智能升降多功能桌" class="w-full h-64 md:h-full object-cover"
+                            <img src="images/index_star_product_multifunctional_table.jpg" alt="博朗通旗舰智能升降多功能桌" class="w-full h-64 md:h-full object-cover"
                                  onerror="this.src='https://placehold.co/600x400/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-banner').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=旗舰系列图片错误'; this.alt='旗舰系列图片加载失败'">
                         </div>
                         <div class="w-full md:w-1/2 p-6 md:p-8 md:pl-8">
                             <h3 class="text-3xl font-semibold mb-3 text-[var(--text-heading)]">旗舰智能升降多功能桌</h3>
                             <p class="text-base text-[var(--text-secondary)] mb-6 leading-relaxed">
-                                搏朗通旗舰系列，是科技与奢华的完美融合。顶级抗菌岩板台面、静音平稳升降系统、以及精湛的工艺细节，为您打造极致的用餐、办公、休闲娱乐体验。
+                                博朗通旗舰系列，是科技与奢华的完美融合。顶级抗菌岩板台面、静音平稳升降系统、以及精湛的工艺细节，为您打造极致的用餐、办公、休闲娱乐体验。
                             </p>
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="about.html" class="button-blue">联系我们</a>
@@ -551,7 +714,7 @@
                         <div class="w-full md:w-1/2 p-6 md:p-8 md:pr-8 order-2 md:order-1">
                             <h3 class="text-3xl font-semibold mb-3 text-[var(--text-heading)]">多功能智慧岛台</h3>
                             <p class="text-base text-[var(--text-secondary)] mb-6 leading-relaxed">
-                                重新定义厨房与餐厅的互动空间。搏朗通智慧岛台集备餐、用餐、社交、收纳于一体，智能升降功能轻松调节高度，适应不同场景。
+                                重新定义厨房与餐厅的互动空间。博朗通智慧岛台集备餐、用餐、社交、收纳于一体，智能升降功能轻松调节高度，适应不同场景。
                             </p>
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="https://shop374097456.taobao.com/" class="button-blue">立即选购</a>
@@ -559,7 +722,7 @@
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 flex-shrink-0 banner-image order-1 md:order-2">
-                            <img src="https://placehold.co/600x400/C0C0C0/0D0D0D?text=BORATON+Island+Series" alt="搏朗通多功能智慧岛台" class="w-full h-64 md:h-full object-cover"
+                            <img src="images/index_star_product_smart_island.jpg" alt="博朗通多功能智慧岛台" class="w-full h-64 md:h-full object-cover"
                                  onerror="this.src='https://placehold.co/600x400/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-banner').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) +'?text=岛台图片错误'; this.alt='岛台系列图片加载失败'">
                         </div>
                     </div>
@@ -572,54 +735,54 @@
                 <h2 class="text-4xl font-semibold mb-12 text-center section-title slide-in-left">探索全系列智能家居</h2>
                 <div class="horizontal-scroll-wrapper">
                     <div class="horizontal-scroll-track" id="product-showcase-scroll-track">
-                        <a href="https://www.boraton.com/category/majiang" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('pictures/T2-2.jpg'); --animation-delay: 0.1s;"
+                        <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_multifunctional_tables.jpg'); --animation-delay: 0.1s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>智能升降多功能桌</h3><p>空间自由转换的智慧核心。</p></div>
-                                <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                                <a href="https://www.boraton.com/category/majiang" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
-                        <a href="https://www.boraton.com/category/island" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('https://placehold.co/600x800/CDB4DB/2c003e?text='); --animation-delay: 0.2s;"
+                        </div>
+                        <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_smart_islands.jpg'); --animation-delay: 0.2s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>多功能智慧岛台</h3><p>开放空间，无限可能。</p></div>
-                                <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                                <a href="https://www.boraton.com/category/island" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
-                        <a href="https://www.boraton.com/category/living" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('https://placehold.co/600x800/A9D2BE/1e4034?text='); --animation-delay: 0.3s;"
+                        </div>
+                        <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_living_room.jpg'); --animation-delay: 0.3s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>客厅智慧方案</h3><p>科技与舒适的和谐共鸣。</p></div>
-                                <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                                <a href="https://www.boraton.com/category/living" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
-                        <a href="https://www.boraton.com/category/dining" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('https://placehold.co/600x800/FFD166/6a4000?text='); --animation-delay: 0.15s;"
+                        </div>
+                        <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_dining_room.jpg'); --animation-delay: 0.15s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>餐厅智慧方案</h3><p>品味优雅，乐享美食时光。</p></div>
-                                <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                                <a href="https://www.boraton.com/category/dining" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
-                        <a href="https://www.boraton.com/category/bedroom" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('https://placehold.co/600x800/8D99AE/2B2D42?text='); --animation-delay: 0.25s;"
+                        </div>
+                        <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_bedroom.jpg'); --animation-delay: 0.25s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>卧室智慧方案</h3><p>打造您的私享静谧空间。</p></div>
-                                <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                                <a href="https://www.boraton.com/category/bedroom" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
-                         <a href="https://www.boraton.com/category/office" class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('https://placehold.co/600x800/98C1D9/293241?text='); --animation-delay: 0.35s;"
+                        </div>
+                         <div class="product-showcase-card animated-card min-h-[450px] md:min-h-[500px]" style="background-image: url('images/index_showcase_office.jpg'); --animation-delay: 0.35s;"
                            onerror="this.style.backgroundImage='url(https://placehold.co/600x800/'.concat(getComputedStyle(document.body).getPropertyValue('--bg-card').substring(1)) +'/'.concat(getComputedStyle(document.body).getPropertyValue('--text-placeholder').substring(1)) + '?text=图加载失败)'">
                             <div class="card-overlay"></div>
                             <div class="card-content-wrapper">
                                 <div><h3>办公智慧方案</h3><p>智能高效，激发无限创造力。</p></div>
-                               <span class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></span>
+                               <a href="https://www.boraton.com/category/office" class="cta-link-on-image">查看系列 <span class="arrow-on-image">→</span></a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -632,19 +795,19 @@
                  </div>
                  <div class="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                      <div class="testimonial-card animated-card" style="--animation-delay: 0.1s;">
-                         <blockquote>“搏朗通的智能升降桌太惊喜了！完美解决了小户型多功能需求，特别是麻将模式，亲朋好友来了都赞不绝口。颜值高，实用性强，清洁也方便，强烈推荐！”</blockquote>
+                         <blockquote>“博朗通的智能升降桌太惊喜了！完美解决了小户型多功能需求，特别是麻将模式，亲朋好友来了都赞不绝口。颜值高，实用性强，清洁也方便，强烈推荐！”</blockquote>
                          <p>张女士 <span>- 上海用户</span></p>
                      </div>
                      <div class="testimonial-card animated-card" style="--animation-delay: 0.2s;">
-                         <blockquote>“我们家选择了搏朗通的岛台，彻底盘活了厨房空间。升降高度很顺畅，无论是站着备菜还是坐下喝咖啡都很舒服。抗菌台面让我这个宝妈很安心。”</blockquote>
+                         <blockquote>“我们家选择了博朗通的岛台，彻底盘活了厨房空间。升降高度很顺畅，无论是站着备菜还是坐下喝咖啡都很舒服。抗菌台面让我这个宝妈很安心。”</blockquote>
                          <p>王先生 <span>- 深圳用户</span></p>
                      </div>
                      <div class="testimonial-card animated-card" style="--animation-delay: 0.3s;">
-                         <blockquote>“非常看重家具的品质和设计感，搏朗通的产品超出了我的预期。从下单到送货安装都体现了专业水准。麻将桌操作简单，升降很静音。”</blockquote>
+                         <blockquote>“非常看重家具的品质和设计感，博朗通的产品超出了我的预期。从下单到送货安装都体现了专业水准。麻将桌操作简单，升降很静音。”</blockquote>
                          <p>李先生 <span>- 广州用户</span></p>
                      </div>
                      <div class="testimonial-card animated-card" style="--animation-delay: 0.4s;">
-                         <blockquote>“一直在寻找一款既能当餐桌又不占地方的解决方案，搏朗通的升降桌完美符合。它的多功能性让居家娱乐变得更轻松，抗菌特性更是让我倍感放心。”</blockquote>
+                         <blockquote>“一直在寻找一款既能当餐桌又不占地方的解决方案，博朗通的升降桌完美符合。它的多功能性让居家娱乐变得更轻松，抗菌特性更是让我倍感放心。”</blockquote>
                          <p>赵女士 <span>- 北京用户</span></p>
                      </div>
                  </div>
@@ -655,9 +818,14 @@
              <div class="container-xl">
                  <div class="max-w-3xl mx-auto text-center cta-section animated-card" style="--animation-delay: 0.1s;">
                      <h2 class="text-4xl font-bold mb-4">开启您的智慧生活新篇章</h2>
-                     <p>立即预约专业咨询，让搏朗通为您量身定制专属的智能家居解决方案，提升您的居住品质。</p>
+                     <p>立即预约专业咨询，让博朗通为您量身定制专属的智能家居解决方案，提升您的居住品质。</p>
                      <div class="mt-8">
-                         <a href="https://shop374097456.taobao.com/" class="button-white">立即预约咨询</a>
+                         <a href="https://u.wechat.com/EDsXkU0iQaDefH77fApIt40?s=2" class="button-white" target="_blank" title="微信联系">
+                            微信联系
+                            <div class="wechat-qr-code">
+                                <img src="images/wechat-qr-code.jpg" alt="微信二维码">
+                            </div>
+                        </a>
                      </div>
                  </div>
              </div>
@@ -677,22 +845,21 @@
     </footer>
 
     <script>
-        // --- 主題切換邏輯 ---
         const themeToggleBtn = document.getElementById('theme-toggle');
         const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
         const sunIcons = document.querySelectorAll('.sun-icon');
         const moonIcons = document.querySelectorAll('.moon-icon');
-        const body = document.body;
+        const bodyEl = document.body;
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
         const applyTheme = (theme) => {
             if (theme === 'dark') {
-                body.classList.remove('light-theme');
+                bodyEl.classList.remove('light-theme');
                 sunIcons.forEach(icon => icon.classList.remove('hidden-icon'));
                 moonIcons.forEach(icon => icon.classList.add('hidden-icon'));
                 localStorage.setItem('theme', 'dark');
             } else {
-                body.classList.add('light-theme');
+                bodyEl.classList.add('light-theme');
                 sunIcons.forEach(icon => icon.classList.add('hidden-icon'));
                 moonIcons.forEach(icon => icon.classList.remove('hidden-icon'));
                 localStorage.setItem('theme', 'light');
@@ -713,7 +880,6 @@
             }
         });
 
-        // --- 預加載器邏輯 ---
         const preloader = document.getElementById('preloader');
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -722,98 +888,132 @@
                     preloader.addEventListener('transitionend', () => preloader.remove());
                     setTimeout(() => { if(preloader && preloader.parentNode) preloader.remove(); }, 600);
                 }
-                document.body.classList.add('loaded');
+                bodyEl.classList.add('loaded');
                 observeSections(); 
                 initializeHeroCarousel(); 
-                // initHorizontalAutoScroll 已包含拖拽和自动滚动逻辑
                 initHorizontalAutoScroll('#features-scroll-track', 0.5, 5000); 
                 initHorizontalAutoScroll('#product-showcase-scroll-track', 0.5, 5000);
             }, 200); 
         });
 
-        // --- 移動端菜單邏輯 ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const iconSpan = mobileMenuButton ? mobileMenuButton.querySelector('span') : null;
-        if (mobileMenuButton && mobileMenu && iconSpan) {
-            mobileMenuButton.addEventListener('click', (event) => {
-                event.stopPropagation(); 
-                const isHidden = mobileMenu.classList.toggle('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', String(!isHidden));
-                iconSpan.textContent = isHidden ? '☰' : '✕'; 
-                if (!isHidden) {
-                    setTimeout(() => {
-                         document.addEventListener('click', handleOutsideClick);
-                         window.addEventListener('resize', closeAllDropdownsAndMenus); 
-                    }, 50); 
-                } else {
-                     document.removeEventListener('click', handleOutsideClick);
-                     window.removeEventListener('resize', closeAllDropdownsAndMenus);
-                }
-            });
-             mobileMenu.addEventListener('click', (event) => { event.stopPropagation(); });
-        }
+        const mobileMenuIconSpan = mobileMenuButton ? mobileMenuButton.querySelector('span') : null;
 
-        // --- 下拉菜單邏輯 ---
-        const productToggle = document.getElementById('product-category-toggle');
-        const productMenu = document.getElementById('product-category-menu');
-        if (productToggle && productMenu) {
-             productToggle.addEventListener('click', (event) => {
-                 event.stopPropagation(); 
-                 const isExpanded = productToggle.getAttribute('aria-expanded') === 'true';
-                 closeAllDropdownsAndMenus(productMenu); 
-                 productToggle.setAttribute('aria-expanded', String(!isExpanded));
-                 productMenu.classList.toggle('hidden');
-                 productMenu.classList.toggle('open');
-                 if (!isExpanded) {
-                     setTimeout(() => {
-                        document.addEventListener('click', handleOutsideClick);
-                        window.addEventListener('resize', closeAllDropdownsAndMenus); 
-                     }, 50);
-                 } else {
-                     document.removeEventListener('click', handleOutsideClick);
-                     window.removeEventListener('resize', closeAllDropdownsAndMenus);
-                 }
-             });
-             productMenu.addEventListener('click', (event) => { event.stopPropagation(); });
+        const desktopProductMenuToggle = document.getElementById('desktop-product-menu-toggle');
+        const desktopFullScreenProductMenu = document.getElementById('desktop-full-screen-product-menu');
+        const desktopMenuCloseButton = document.getElementById('desktop-menu-close-button');
+        const desktopProductMenuToggleChevron = desktopProductMenuToggle ? desktopProductMenuToggle.querySelector('.chevron-icon') : null;
+
+
+        function closeAllMenus(excludeMenu = null) {
+            // Close mobile menu
+            if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open') && excludeMenu !== mobileMenu) {
+                mobileMenu.classList.remove('mobile-menu-open');
+                if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+                if (mobileMenuIconSpan) mobileMenuIconSpan.textContent = '☰'; 
+            }
+
+            // Close desktop full-screen product menu
+            if (desktopFullScreenProductMenu && desktopFullScreenProductMenu.classList.contains('open') && excludeMenu !== desktopFullScreenProductMenu) {
+                desktopFullScreenProductMenu.classList.remove('open');
+                desktopFullScreenProductMenu.classList.add('hidden'); // Add hidden class after transition
+                if (desktopProductMenuToggle) desktopProductMenuToggle.setAttribute('aria-expanded', 'false');
+                if (desktopProductMenuToggleChevron) desktopProductMenuToggleChevron.style.transform = 'rotate(0deg)';
+                bodyEl.classList.remove('desktop-menu-open'); // Remove blur class
+            }
+
+            // Remove global click/resize listeners if no menus are open
+            if ((!mobileMenu || !mobileMenu.classList.contains('mobile-menu-open')) && 
+                (!desktopFullScreenProductMenu || desktopFullScreenProductMenu.classList.contains('hidden'))) {
+                 document.removeEventListener('click', handleOutsideClick);
+                 window.removeEventListener('resize', closeAllMenus);
+            }
         }
 
         function handleOutsideClick(event) {
-             let shouldClose = true;
-             if (mobileMenu && !mobileMenu.classList.contains('hidden') && (mobileMenu.contains(event.target) || (mobileMenuButton && mobileMenuButton.contains(event.target)))) {
-                 shouldClose = false;
-             }
-             if (productMenu && !productMenu.classList.contains('hidden') && (productMenu.contains(event.target) || (productToggle && productToggle.contains(event.target)))) {
-                 shouldClose = false;
-             }
-             if (shouldClose) {
-                 closeAllDropdownsAndMenus();
-             }
-        }
-        function closeAllDropdownsAndMenus(excludeMenu = null) {
-             if (mobileMenu && !mobileMenu.classList.contains('hidden') && excludeMenu !== mobileMenu) {
-                 mobileMenu.classList.add('hidden');
-                 if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
-                 if (iconSpan) iconSpan.textContent = '☰'; 
-             }
-             if (productMenu && !productMenu.classList.contains('hidden') && excludeMenu !== productMenu) {
-                 productMenu.classList.add('hidden');
-                 productMenu.classList.remove('open');
-                 if (productToggle) productToggle.setAttribute('aria-expanded', 'false');
-             }
-             if ((!mobileMenu || mobileMenu.classList.contains('hidden')) && (!productMenu || productMenu.classList.contains('hidden'))) {
-                  document.removeEventListener('click', handleOutsideClick);
-                  window.removeEventListener('resize', closeAllDropdownsAndMenus);
-             }
+            let shouldClose = true;
+            if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open') && (mobileMenu.contains(event.target) || (mobileMenuButton && mobileMenuButton.contains(event.target)))) {
+                shouldClose = false;
+            }
+            if (desktopFullScreenProductMenu && desktopFullScreenProductMenu.classList.contains('open') && (desktopFullScreenProductMenu.contains(event.target) || (desktopProductMenuToggle && desktopProductMenuToggle.contains(event.target)))) {
+                shouldClose = false;
+            }
+            if (shouldClose) {
+                closeAllMenus();
+            }
         }
 
-        // --- 區塊淡入觀察器 ---
+        // Mobile menu toggle
+        if (mobileMenuButton && mobileMenu && mobileMenuIconSpan) {
+            mobileMenuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                const isOpen = mobileMenu.classList.toggle('mobile-menu-open');
+                mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+                mobileMenuIconSpan.textContent = isOpen ? '✕' : '☰';
+                
+                if (isOpen) {
+                    closeAllMenus(mobileMenu); // Close other menus
+                    setTimeout(() => {
+                         document.addEventListener('click', handleOutsideClick);
+                         window.addEventListener('resize', closeAllMenus); 
+                    }, 400);
+                } else {
+                     document.removeEventListener('click', handleOutsideClick);
+                     window.removeEventListener('resize', closeAllMenus);
+                }
+            });
+            mobileMenu.addEventListener('click', (event) => { event.stopPropagation(); });
+        }
+
+        // Desktop full-screen product menu toggle
+        if (desktopProductMenuToggle && desktopFullScreenProductMenu && desktopMenuCloseButton && desktopProductMenuToggleChevron) {
+            desktopProductMenuToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isOpen = desktopFullScreenProductMenu.classList.toggle('open');
+                desktopFullScreenProductMenu.classList.remove('hidden'); // Ensure it's not hidden
+                desktopProductMenuToggle.setAttribute('aria-expanded', String(isOpen));
+                desktopProductMenuToggleChevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                bodyEl.classList.toggle('desktop-menu-open', isOpen); // Toggle blur class
+
+                if (isOpen) {
+                    closeAllMenus(desktopFullScreenProductMenu); // Close other menus
+                    setTimeout(() => {
+                        document.addEventListener('click', handleOutsideClick);
+                        window.addEventListener('resize', closeAllMenus);
+                    }, 50); // Small delay to allow menu to open before outside click listener
+                } else {
+                    // Handled by closeAllMenus when it transitions out
+                }
+            });
+
+            desktopMenuCloseButton.addEventListener('click', () => {
+                closeAllMenus();
+            });
+
+            // Prevent clicks inside the full-screen menu from closing it immediately
+            desktopFullScreenProductMenu.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            // Add transitionend listener to add 'hidden' class after closing animation
+            desktopFullScreenProductMenu.addEventListener('transitionend', () => {
+                if (!desktopFullScreenProductMenu.classList.contains('open')) {
+                    desktopFullScreenProductMenu.classList.add('hidden');
+                }
+            });
+        }
+
+
         function observeSections() {
             const sections = document.querySelectorAll('.fade-in-section');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        const animatedCards = entry.target.querySelectorAll('.animated-card');
+                        animatedCards.forEach((card, index) => {
+                        });
                         observer.unobserve(entry.target); 
                     }
                 });
@@ -821,7 +1021,6 @@
             sections.forEach(section => { observer.observe(section); });
         }
         
-        // --- Hero Carousel Logic ---
         function initializeHeroCarousel() {
             const carouselContainer = document.querySelector('.hero-carousel');
             if (!carouselContainer) return;
@@ -870,112 +1069,132 @@
             startAutoPlay();
         }
 
-        // --- 水平自動滾動及拖動滾動邏輯 (增強版) ---
         function initHorizontalAutoScroll(trackSelector, scrollSpeed = 1, idleTimeoutMillis = 5000) {
-            const track = document.querySelector(trackSelector); // 獲取滾動軌道元素
-            if (!track) { /* console.warn(`Horizontal scroll track not found: ${trackSelector}`); */ return; }
+            const track = document.querySelector(trackSelector);
+            if (!track) { return; }
 
-            const wrapper = track.parentElement; // 獲取滾動軌道的父元素，即 .horizontal-scroll-wrapper
-            if (!wrapper) { /* console.warn(`Scroll wrapper not found for track: ${trackSelector}`); */ return; }
+            const wrapper = track.parentElement;
+            if (!wrapper) { return; }
 
-            let autoScrollInterval; // 自動滾動的計時器
-            let userInteractedTimeout; // 用戶交互後的空閒計時器
-            let isPausedByHover = false; // 標記鼠標是否懸停在容器上
-            let isDragging = false;      // 標記是否正在拖動
-            let startX;                  // 拖動開始時的鼠標X座標
-            let scrollLeftStart;         // 拖動開始時容器的滾動位置
+            let autoScrollInterval;
+            let userInteractedTimeout;
+            let isPausedByHover = false;
+            let isDragging = false;
+            let startX;
+            let scrollLeftStart;
 
-            // 開始自動滾動
             function startAutoScrolling() {
-                if (isPausedByHover || isDragging) return; // 如果鼠標懸停或正在拖動，則不啟動自動滾動
-                stopAutoScrolling(); // 清除任何現有的自動滾動計時器
+                if (isPausedByHover || isDragging) return;
+                stopAutoScrolling();
                 autoScrollInterval = setInterval(() => {
-                    // 判斷是否滾動到末尾 (wrapper.scrollWidth 是內容總寬度)
-                    if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 1.5) { // 減去1.5像素作為容錯
-                        wrapper.scrollLeft = 0; // 回到開頭，實現循環滾動
+                    if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 1.5) {
+                        wrapper.scrollLeft = 0;
                     } else {
-                        wrapper.scrollLeft += scrollSpeed; // 向右滾動指定的像素
+                        wrapper.scrollLeft += scrollSpeed;
                     }
-                }, 20); // 每20毫秒滾動一次，可以調整此值以改變滾動的平滑度和速度
+                }, 20);
             }
 
-            // 停止自動滾動
             function stopAutoScrolling() {
                 clearInterval(autoScrollInterval);
             }
 
-            // 處理用戶交互（滾輪、觸摸、拖動結束後）
             function handleUserInteraction() {
-                stopAutoScrolling(); // 首先停止當前的自動滾動
-                clearTimeout(userInteractedTimeout); // 清除之前的空閒計時器
+                stopAutoScrolling();
+                clearTimeout(userInteractedTimeout);
                 userInteractedTimeout = setTimeout(() => {
-                    // 只有在鼠標未懸停且未在拖動時，才恢復自動滾動
                     if (!isPausedByHover && !isDragging) {
                         startAutoScrolling();
                     }
-                }, idleTimeoutMillis); // 等待指定的空閒時間後，再嘗試恢復自動滾動
+                }, idleTimeoutMillis);
             }
 
-            // 監聽容器的 'scroll' 事件 (由滾輪、觸摸滑動、或JS改變scrollLeft觸發)
             wrapper.addEventListener('scroll', () => {
-                if (!isDragging) { // 如果不是由當前拖動行為引起的滾動
-                    handleUserInteraction(); // 則視為一次用戶交互，處理自動滾動的暫停和恢復
+                if (!isDragging) { 
+                    handleUserInteraction();
                 }
             });
 
-            // 鼠標進入容器
             wrapper.addEventListener('mouseenter', () => {
-                isPausedByHover = true; // 標記鼠標已懸停
-                stopAutoScrolling();    // 停止自動滾動
+                isPausedByHover = true;
+                stopAutoScrolling();
             });
 
-            // 鼠標離開容器
             wrapper.addEventListener('mouseleave', () => {
-                isPausedByHover = false; // 取消鼠標懸停標記
-                if (!isDragging) { // 如果不是因為正在拖動而離開容器
-                    handleUserInteraction(); // 處理用戶交互結束，準備在空閒後恢復自動滾動
+                isPausedByHover = false;
+                if (!isDragging) {
+                    handleUserInteraction(); 
                 }
-                // 如果 isDragging 為 true 且鼠標離開，拖動狀態會在全局 mouseup 事件中結束
-            });
-
-            // 拖動滾動 - 鼠標在 wrapper 上按下
-            wrapper.addEventListener('mousedown', (e) => {
-                isDragging = true; // 標記開始拖動
-                startX = e.pageX - wrapper.offsetLeft; // 計算鼠標相對於 wrapper 左邊的初始位置
-                scrollLeftStart = wrapper.scrollLeft;   // 記錄當前滾動位置
-                wrapper.classList.add('grabbing');      // 添加 grabbing 樣式 (CSS中定義鼠標指針)
-                wrapper.style.userSelect = 'none';      // 禁止拖動時選中文本
-                stopAutoScrolling();                    // 拖動開始，停止自動滾動
-            });
-
-            // 拖動滾動 - 鼠標在 window 上移動 (確保鼠標移出 wrapper 範圍仍可拖動)
-            window.addEventListener('mousemove', (e) => {
-                if (!isDragging) return; // 如果未開始拖動，則不執行
-                e.preventDefault(); // 阻止默認的mousemove行為 (如圖片拖拽)
-                const x = e.pageX - wrapper.offsetLeft; // 計算當前鼠標相對於 wrapper 左邊的位置
-                const walk = (x - startX) * 1.5; // 計算拖動距離，1.5是拖動速度乘數，可調整
-                wrapper.scrollLeft = scrollLeftStart - walk; // 更新滾動位置
-                // 拖動時會觸發 wrapper 的 'scroll' 事件，該事件會調用 handleUserInteraction
-            });
-
-            // 拖動滾動 - 鼠標在 window 上鬆開 (確保任何位置鬆開都結束拖動)
-            window.addEventListener('mouseup', () => {
-                if (!isDragging) return; // 如果未開始拖动，則不執行
-                isDragging = false; // 標記拖動結束
-                wrapper.classList.remove('grabbing'); // 移除 grabbing 樣式
-                wrapper.style.userSelect = '';        // 恢復文本選擇
-                handleUserInteraction(); // 拖動結束，視為一次用戶交互，處理自動滾動的恢復
             });
             
-            // 初始啟動自動滾動
+            wrapper.addEventListener('mousedown', (e) => {
+                if (e.target !== wrapper && e.target !== track && !track.contains(e.target)) {
+                    if (e.target.closest('a.product-showcase-card')) {
+                        return;
+                    }
+                }
+                e.preventDefault();
+
+                isDragging = true;
+                startX = e.pageX - wrapper.offsetLeft;
+                scrollLeftStart = wrapper.scrollLeft;
+                wrapper.classList.add('grabbing');
+                bodyEl.classList.add('no-scroll-during-drag');
+                bodyEl.style.userSelect = 'none';
+                stopAutoScrolling();
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const x = e.pageX - wrapper.offsetLeft;
+                const walk = (x - startX) * 1.5; 
+                wrapper.scrollLeft = scrollLeftStart - walk;
+            });
+
+            window.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                wrapper.classList.remove('grabbing');
+                bodyEl.classList.remove('no-scroll-during-drag');
+                bodyEl.style.userSelect = '';
+                handleUserInteraction();
+            });
+            
+            wrapper.addEventListener('touchstart', (e) => {
+                if (e.target !== wrapper && e.target !== track && !track.contains(e.target)) {
+                    if (e.target.closest('a.product-showcase-card')) {
+                         return;
+                    }
+                }
+
+                isDragging = true;
+                startX = e.touches[0].pageX - wrapper.offsetLeft;
+                scrollLeftStart = wrapper.scrollLeft;
+                wrapper.classList.add('grabbing');
+                stopAutoScrolling();
+            }, { passive: true });
+
+            wrapper.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].pageX - wrapper.offsetLeft;
+                const walk = (x - startX) * 1.5; 
+                wrapper.scrollLeft = scrollLeftStart - walk;
+            }, { passive: true });
+
+            wrapper.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                wrapper.classList.remove('grabbing');
+                handleUserInteraction();
+            });
+            
             startAutoScrolling();
         }
 
-         // 為移動菜單項添加點擊事件以關閉菜單
          if (mobileMenu) {
              mobileMenu.querySelectorAll('a').forEach(link => {
                  link.addEventListener('click', () => {
-                     closeAllDropdownsAndMenus();
+                     closeAllMenus(); // Use the unified close function
                  });
              });
          }
